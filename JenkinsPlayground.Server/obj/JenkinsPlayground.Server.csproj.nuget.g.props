@@ -12,4 +12,35 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/Users/init/.nuget/packages/" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <None Include="$(NuGetPackageRoot)harfbuzzsharp.nativeassets.linux/8.3.0-preview.1.8/contentFiles/any/net7.0/libHarfBuzzSharp.so" Condition="Exists('$(NuGetPackageRoot)harfbuzzsharp.nativeassets.linux/8.3.0-preview.1.8/contentFiles/any/net7.0/libHarfBuzzSharp.so')">
+      <NuGetPackageId>HarfBuzzSharp.NativeAssets.Linux</NuGetPackageId>
+      <NuGetPackageVersion>8.3.0-preview.1.8</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>libHarfBuzzSharp.so</Link>
+    </None>
+    <None Include="$(NuGetPackageRoot)harfbuzzsharp.nativeassets.linux/8.3.0-preview.1.8/contentFiles/any/net7.0/libHarfBuzzSharp.so.0.60830.0" Condition="Exists('$(NuGetPackageRoot)harfbuzzsharp.nativeassets.linux/8.3.0-preview.1.8/contentFiles/any/net7.0/libHarfBuzzSharp.so.0.60830.0')">
+      <NuGetPackageId>HarfBuzzSharp.NativeAssets.Linux</NuGetPackageId>
+      <NuGetPackageVersion>8.3.0-preview.1.8</NuGetPackageVersion>
+      <NuGetItemType>None</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>libHarfBuzzSharp.so.0.60830.0</Link>
+    </None>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server/6.0.5/build/Microsoft.Extensions.ApiDescription.Server.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server/6.0.5/build/Microsoft.Extensions.ApiDescription.Server.props')" />
+    <Import Project="$(NuGetPackageRoot)swashbuckle.aspnetcore/6.5.0/build/Swashbuckle.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)swashbuckle.aspnetcore/6.5.0/build/Swashbuckle.AspNetCore.props')" />
+    <Import Project="$(NuGetPackageRoot)sixlabors.imagesharp/3.1.2/build/SixLabors.ImageSharp.props" Condition="Exists('$(NuGetPackageRoot)sixlabors.imagesharp/3.1.2/build/SixLabors.ImageSharp.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/7.0.15/buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/7.0.15/buildTransitive/net6.0/Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design/7.0.15/build/net6.0/Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design/7.0.15/build/net6.0/Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/Users/init/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgSentry Condition=" '$(PkgSentry)' == '' ">/Users/init/.nuget/packages/sentry/4.0.3</PkgSentry>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/init/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_AnalyzerUtilities Condition=" '$(PkgMicrosoft_CodeAnalysis_AnalyzerUtilities)' == '' ">/Users/init/.nuget/packages/microsoft.codeanalysis.analyzerutilities/3.3.0</PkgMicrosoft_CodeAnalysis_AnalyzerUtilities>
+  </PropertyGroup>
 </Project>
