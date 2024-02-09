@@ -1,2 +1,2 @@
-# Jenkins-playground
+# JenkinsPlayground
 Working with Jenkins
