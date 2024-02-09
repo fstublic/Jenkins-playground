@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/JenkinsPlayground.Server.props" />
+</Project>

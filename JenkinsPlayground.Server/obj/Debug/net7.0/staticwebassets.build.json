@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+/GwowmvWg890UkR3nBNKMFIznk0WMcYwRQikjXkhpI=",
+  "Source": "JenkinsPlayground.Server",
+  "BasePath": "_content/JenkinsPlayground.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
