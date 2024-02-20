@@ -1,6 +1,23 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using JenkinsPlayground.Server;
 
-app.MapGet("/", () => "Hello World!");
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("JenkinsPlayground Server initializing...");
+        CreateHostBuilder(args).Build().Run();
+    }
 
-app.Run();
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder
+                    .UseStartup<Startup>()
+                    .UseUrls("http://localhost:5000")
+                    .UseKestrel(options =>
+                    {
+                        options.Limits.MaxRequestBodySize = int.MaxValue;
+                    });
+            });
+}

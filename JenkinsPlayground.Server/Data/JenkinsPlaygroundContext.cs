@@ -1,3 +1,4 @@
+using JenkinsPlayground.Server.Tenants;
 using Microsoft.EntityFrameworkCore;
 
 namespace JenkinsPlayground.Server.Data;
@@ -16,4 +17,6 @@ public class JenkinsPlaygroundContext : DbContext
     {
         
     }
+    
+    public DbSet<Tenant> Tenants { get; set; }
 }

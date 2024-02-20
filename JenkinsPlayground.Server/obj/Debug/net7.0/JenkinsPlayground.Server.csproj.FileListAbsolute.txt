@@ -77,9 +77,7 @@
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
-/Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
-/Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.Identity.Client.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/init/Desktop/Projects/Personal/Jenkins/JenkinsPlayground/JenkinsPlayground.Server/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
