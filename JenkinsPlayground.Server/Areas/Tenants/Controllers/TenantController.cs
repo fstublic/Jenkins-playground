@@ -37,12 +37,33 @@ public class TenantController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<Tenant>> Add([FromBody] TenantAddRequest model)
+    public async Task<ActionResult<TenantResponse>> Add([FromBody] TenantAddRequest model)
     {
         var tenant = _mapper.Map<Tenant>(model);
         tenant = await _tenantService.AddTenant(tenant);
         var result = await _tenantService.GetTenantApi(tenant.Id);
 
         return Created("", result);
+    }
+    
+    [HttpPut("{id}")]
+    public async Task<ActionResult<TenantResponse>> Update([FromBody] TenantUpdateRequest model, Guid id)
+    {
+        var tenant = await _tenantService.GetTenantById(id);
+        _mapper.Map(model, tenant);
+        tenant = await _tenantService.UpdateTenant(tenant);
+        var result = await _tenantService.GetTenantApi(tenant.Id);
+
+        return Ok(result);
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<TenantResponse>> Delete(Guid id)
+    {
+        var tenant = await _tenantService.GetTenantById(id);
+        var result = await _tenantService.GetTenantApi(tenant.Id);
+        await _tenantService.RemoveTenant(tenant);
+
+        return Ok(result);
     }
 }

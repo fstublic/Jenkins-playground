@@ -9,11 +9,13 @@ public class TenantService
 {
     private readonly JenkinsPlaygroundContext _context;
     private readonly IMapper _mapper;
+    private readonly DateTimeProvider _dateTimeProvider;
 
-    public TenantService(JenkinsPlaygroundContext context, IMapper mapper)
+    public TenantService(JenkinsPlaygroundContext context, IMapper mapper, DateTimeProvider dateTimeProvider)
     {
         _context = context;
         _mapper = mapper;
+        _dateTimeProvider = dateTimeProvider;
     }
     
     private readonly string _selectSql =
@@ -59,5 +61,20 @@ public class TenantService
         var result = _context.Tenants.Add(tenant).Entity;
         await _context.SaveChangesAsync();
         return result;
+    }
+
+    public async Task<Tenant> UpdateTenant(Tenant tenant)
+    {
+        tenant.UpdatedAt = _dateTimeProvider.UtcNow;
+        tenant = _context.Tenants.Update(tenant).Entity;
+        await _context.SaveChangesAsync();
+
+        return tenant;
+    }
+
+    public async Task RemoveTenant(Tenant tenant)
+    {
+        _context.Tenants.Remove(tenant);
+        await _context.SaveChangesAsync();
     }
 }

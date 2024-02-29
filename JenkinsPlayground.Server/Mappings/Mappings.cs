@@ -8,6 +8,7 @@ public class Mappings : Profile
     public Mappings()
     {
         CreateMap<TenantAddRequest, Tenant>();
+        CreateMap<TenantUpdateRequest, Tenant>();
         CreateMap<Tenant, TenantResponse>();
     }
 }
