@@ -7,5 +7,6 @@ public class TenantAddRequest
     [Required]
     public string Name { get; set; }
     public string Phone { get; set; }
+    [Required]
     public string Email { get; set; }
 }

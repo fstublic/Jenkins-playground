@@ -11,5 +11,6 @@ public class Tenant
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
     public string Phone { get; set; }
+    [Required]
     public string Email { get; set; }
 }
