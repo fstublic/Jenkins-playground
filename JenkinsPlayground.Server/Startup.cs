@@ -3,6 +3,7 @@ using AspNetCore.Authentication.ApiKey;
 using Dapper;
 using JenkinsPlayground.Server.Data;
 using JenkinsPlayground.Server.Helpers;
+using JenkinsPlayground.Server.Tenants;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -142,7 +143,10 @@ public class Startup
         services.AddDbContext<JenkinsPlaygroundContext>(options => options.UseNpgsql(dbConnectionString));
         services.AddHttpContextAccessor();
         services.AddAutoMapper(typeof(Mappings.Mappings));
+        
         services.AddSingleton<DateTimeProvider>();
+        
+        services.AddScoped<TenantService>();
     }
 
     public void Configure(
